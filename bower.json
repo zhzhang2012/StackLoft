@@ -1,0 +1,23 @@
+{
+  "name": "node-js-getting-started",
+  "version": "0.0.0",
+  "homepage": "https://github.com/leancloud/node-js-getting-started",
+  "authors": [
+    "zhzhang2012 <zhzhangtony@gmail.com>"
+  ],
+  "description": "A sample for real-time communication after database update",
+  "keywords": [
+    "Realtime"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "leancloud-realtime": "~2.1.0"
+  }
+}

@@ -10,6 +10,12 @@
       <input type="text" name="content" />
       <input type="submit" value="新增" />
     </form>
+    <h3>Update</h3>
+    <form action="/todos/query" method="POST">
+        <span>Id: </span><input type="text" name="objectId" /><br>
+        <span>New Content: </span><input type="text" name="newContent" /><br>
+        <input type="submit" value="Update" />
+    </form>
     <ul>
       <% for(var i=0; i<todos.length; i++) {%>
       <li><%= todos[i].get('content') %></li>

@@ -5,3 +5,7 @@ start.sh
 *~
 *.swp
 .avoscloud/
+.avoscloud/
+
+.idea/
+.DS_Store

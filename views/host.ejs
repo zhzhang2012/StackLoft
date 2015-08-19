@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Host</title>
+    <script type="text/javascript" src="/leancloud-push/src/AV.push.js"></script>
+    <script type="text/javascript" src="/js/host.js"></script>
+  </head>
+  <body>
+    <form action="/host" method="POST">
+        <span>Listen Data Id: </span><input type='text' name='objectId' />
+        <span>Unique Client Id: </span><input type='text' name='channelId' id="channelId" />
+        <input type="submit" value="Start Listening" />
+    </form>
+    <button onclick="subscribe()">Subscribe</button>
+  </body>
+</html>
