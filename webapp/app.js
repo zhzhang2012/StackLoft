@@ -1,1 +1,2 @@
-angular.module('StackLoft', ['StackLoft.controllers']);
+angular.module('StackLoft', ['StackLoft.controllers',
+                             'StackLoft.services']);

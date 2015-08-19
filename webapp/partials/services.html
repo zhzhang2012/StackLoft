@@ -1,7 +1,6 @@
-{{ services.length }}
-<div ng-repeat="service in services">
-    pppp
-    <span>{{ service.name }}</span>
+<div ng-repeat="service in services" ng-click="showDetail(service.id)">
+    <span><strong>{{ service.name }}</strong></span>
     <p>{{ service.brief }}</p>
     <div>{{ service.description }}</div>
+    <br>
 </div>

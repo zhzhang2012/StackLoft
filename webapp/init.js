@@ -7,7 +7,7 @@ angular.module('StackLoft').run(function () {
     var LeanCloud = (function (params) {
         var ClassDefines = {
             Service: {
-                attributes: ['description', 'features', 'name', 'brief']
+                attributes: ['description', 'features', 'name', 'brief', 'logo']
             },
             Article: {
                 attributes: ['title', 'brief', 'content']
