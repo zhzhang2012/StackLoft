@@ -19,4 +19,7 @@ angular.module('StackLoft').config(['$routeProvider',
                 templateUrl: "partials/article.html",
                 controller: "ArticleController"
             })
+            .otherwise({
+                redirectTo: '/'
+            })
     }]);
