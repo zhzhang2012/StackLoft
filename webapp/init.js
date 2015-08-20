@@ -10,7 +10,7 @@ angular.module('StackLoft').run(function () {
                 attributes: ['description', 'features', 'name', 'brief', 'logo']
             },
             Article: {
-                attributes: ['title', 'brief', 'content']
+                attributes: ['title', 'keywords', 'content']
             }
         };
         return {

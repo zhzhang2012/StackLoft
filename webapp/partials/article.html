@@ -1,3 +1,7 @@
 <h3>{{ article.title }}</h3>
-<h5>{{ article.brief }}</h5>
-<p>{{ article.content }}</p>
+<ol>
+ <li ng-repeat="keyword in article.keywords">{{ keyword }}</li>
+</ol>
+
+<div btf-markdown="article.content">
+</div>

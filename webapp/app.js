@@ -1,2 +1,6 @@
-angular.module('StackLoft', ['StackLoft.controllers',
-                             'StackLoft.services']);
+angular.module('StackLoft', ['ngRoute',
+                             'ngResource',
+                             'ngSanitize',
+                             'StackLoft.controllers',
+                             'StackLoft.services',
+                             'btford.markdown']);

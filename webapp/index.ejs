@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="StackLoft">
   <head>
     <title>StackLoft</title>
 
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- AngularJS Source Files -->
-    <script type="text/javascript" src="assets/libs/angular/angular.min-1.1.5.js"></script>
+    <script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
     <script type="text/javascript" src="assets/libs/angular/angular-route.min.js"></script>
     <script type="text/javascript" src="assets/libs/angular/angular-cookies.min.js"></script>
     <script type="text/javascript" src="assets/libs/angular/angular-loader.min.js"></script>
@@ -21,17 +21,22 @@
 
     <!-- UnderScore Source File -->
     <script type="text/javascript" src="assets/libs/underscore/underscore-min.js"></script>
+
+    <!-- Markdown Library -->
+    <script type="text/javascript" src="showdown/src/showdown.js"></script>
+    <script type="text/javascript" src="angular-markdown-directive/markdown.js"></script>
   </head>
 
-  <body ng-app="StackLoft">
+  <body>
 
-  <ng-view></ng-view>
+  <div ng-view></div>
 
   <!-- Configure -->
   <script type="text/javascript" src="app.js"></script>
   <script type="text/javascript" src="config.js"></script>
   <script type="text/javascript" src="init.js"></script>
   <script type="text/javascript" src="controllers.js"></script>
+  <script type="text/javascript" src="filters.js"></script>
   <script type="text/javascript" src="services.js"></script>
 
   </body>

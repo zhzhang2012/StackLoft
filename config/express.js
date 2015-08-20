@@ -11,6 +11,7 @@ module.exports = function (app) {
 
     app.use(express.static('public'));
     app.use(express.static('webapp'));
+    app.use(express.static('bower_components'));
 
     // 加载云代码方法
     app.use(cloud);
