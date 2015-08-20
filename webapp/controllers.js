@@ -1,8 +1,60 @@
 'use strict';
 
 angular.module('StackLoft.controllers', [])
-    .controller('MainController', ['$scope', function ($scope) {
+    .controller('MainController', ['$scope', '$location', function ($scope, $location) {
+        var PAGE_SIZE = 5; // TODO: Move to service
 
+        var Featured = AV.Object.extend('Featured');
+        var featureQuery = new AV.Query(Featured);
+        featureQuery.ascending('position');
+
+        featureQuery.find({
+            success: function (features) {
+                $scope.features = [];
+                angular.forEach(features, function(feature, index) {
+
+                });
+                $scope.$apply();
+            },
+            error: function () {
+                console.log("Error loading services");
+                $scope.$apply();
+            }
+        });
+
+        var Service = AV.Object.extend('Service');
+        var serviceQuery = new AV.Query(Service);
+        serviceQuery.limit(PAGE_SIZE);
+
+        serviceQuery.find({
+            success: function (services) {
+                $scope.services = services;
+                $scope.$apply();
+            },
+            error: function () {
+                console.log("Error loading services");
+                $scope.$apply();
+            }
+        });
+
+        var Article = AV.Object.extend('Article');
+        var articleQuery = new AV.Query(Article);
+        articleQuery.limit(PAGE_SIZE);
+
+        articleQuery.find({
+            success: function (articles) {
+                $scope.articles = articles;
+                $scope.$apply();
+            },
+            error: function () {
+                console.log("Error loading services");
+                $scope.$apply();
+            }
+        });
+
+        $scope.redirect = function (path) {
+            $location.path(path);
+        }
     }])
     .controller('ServicesController', ['$scope', '$location', function ($scope, $location) {
         var Service = AV.Object.extend('Service');

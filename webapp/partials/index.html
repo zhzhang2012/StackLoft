@@ -1,0 +1,28 @@
+<div id="position_0">
+
+</div>
+
+<div id="position_1">
+
+</div>
+
+<table>
+    <tbody>
+    <tr ng-repeat="service in services" ng-click="redirect('/services/' + service.id)">
+        <td>{{ service.name }}</td>
+        <img src="{{ service.logo.url() }}" />
+    </tr>
+    </tbody>
+</table>
+<button ng-click="redirect('/services')">More...</button>
+
+<table>
+    <tbody>
+    <tr ng-repeat="article in articles" ng-click="redirect('/articles/' + article.id)">
+        <td>{{ article.title }}</td>
+    </tr>
+    </tbody>
+</table>
+<button ng-click="redirect('/articles')">More...</button>
+
+
