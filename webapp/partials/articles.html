@@ -1,0 +1,23 @@
+<div class="mdl-layout__tab-panel" id="articles">
+    <section class="section--center mdl-grid mdl-grid--no-spacing" ng-repeat="article in articles">
+        <div class="mdl-cell mdl-cell--12-col">
+            <h2 ng-click="redirectTo(article.id)">{{ article.title }}</h2>
+            <!--<ul class="toc">-->
+            <!--<h4>Contents</h4>-->
+            <!--<a href="#lorem1">Lorem ipsum</a>-->
+            <!--<a href="#lorem2">Lorem ipsum</a>-->
+            <!--<a href="#lorem3">Lorem ipsum</a>-->
+            <!--<a href="#lorem4">Lorem ipsum</a>-->
+            <!--<a href="#lorem5">Lorem ipsum</a>-->
+            <!--</ul>-->
+
+            <ul class="toc">
+                <li ng-repeat="keyword in article.keywords">{{ keyword }}</li>
+            </ul>
+
+            <div btf-markdown="article.content">
+            </div>
+        </div>
+        <hr>
+    </section>
+</div>

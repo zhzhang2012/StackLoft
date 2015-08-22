@@ -15,6 +15,10 @@ angular.module('StackLoft').config(['$routeProvider',
                 templateUrl: "partials/service.html",
                 controller: "ServiceController"
             })
+            .when('/articles', {
+                templateUrl: "partials/articles.html",
+                controller: "ArticlesController"
+            })
             .when('/articles/:aid', {
                 templateUrl: "partials/article.html",
                 controller: "ArticleController"

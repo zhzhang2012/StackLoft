@@ -1,6 +1,11 @@
 'use strict';
 
 angular.module('StackLoft.controllers', [])
+    .controller('HeaderController', ['$scope', '$location', function ($scope, $location) {
+        $scope.redirectTo = function (path) {
+            $location.path(path);
+        }
+    }])
     .controller('MainController', ['$scope', '$location', function ($scope, $location) {
         var PAGE_SIZE = 5; // TODO: Move to service
 
@@ -11,7 +16,7 @@ angular.module('StackLoft.controllers', [])
         featureQuery.find({
             success: function (features) {
                 $scope.features = [];
-                angular.forEach(features, function(feature, index) {
+                angular.forEach(features, function (feature, index) {
 
                 });
                 $scope.$apply();
@@ -102,6 +107,25 @@ angular.module('StackLoft.controllers', [])
 
         $scope.showArticle = function (id) {
             $location.path('/articles/' + id);
+        }
+    }])
+    .controller('ArticlesController', ['$scope', '$location', function ($scope, $location) {
+        var Article = AV.Object.extend('Article');
+        var query = new AV.Query(Article);
+
+        query.find({
+            success: function (articles) {
+                $scope.articles = articles;
+                $scope.$apply();
+            },
+            error: function () {
+                console.log("Error loading the article");
+                $scope.$apply();
+            }
+        });
+
+        $scope.redirectTo = function (id) {
+            $location.path('articles/' + id);
         }
     }])
     .controller('ArticleController', ['$scope', '$routeParams', function ($scope, $routeParams) {
