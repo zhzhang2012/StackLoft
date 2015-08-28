@@ -16,7 +16,7 @@
   limitations under the License
 -->
 <html lang="en" ng-app="StackLoft">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
@@ -42,23 +42,25 @@
     <link rel="canonical" href="http://www.example.com/">
     -->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+          rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/mdl/material.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/index.css">
+
     <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
+        #view-source {
+            position: fixed;
+            display: block;
+            right: 0;
+            bottom: 0;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            z-index: 900;
+        }
     </style>
 
     <!-- AngularJS Source Files -->
@@ -80,31 +82,30 @@
     <!-- Markdown Library -->
     <script type="text/javascript" src="showdown/src/showdown.js"></script>
     <script type="text/javascript" src="angular-markdown-directive/markdown.js"></script>
-  </head>
+</head>
 
-  <body class="stack-loft mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-      <ng-include src="'partials/header.html'" include-replace></ng-include>
+<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-      <main class="mdl-layout__content" >
+    <ng-include src="'partials/header-top.html'"></ng-include>
+
+    <main class="mdl-layout__content">
         <div ng-view>
         </div>
 
-        <ng-include src="'partials/footer.html'" include-replace></ng-include>
+        <ng-include src="'partials/header-bottom.html'"></ng-include>
+    </main>
+</div>
 
-      </main>
-    </div>
+<!-- Configure -->
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript" src="init.js"></script>
+<script type="text/javascript" src="controllers.js"></script>
+<script type="text/javascript" src="directives.js"></script>
+<script type="text/javascript" src="filters.js"></script>
+<script type="text/javascript" src="services.js"></script>
 
-    <!-- Configure -->
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="config.js"></script>
-    <script type="text/javascript" src="init.js"></script>
-    <script type="text/javascript" src="controllers.js"></script>
-    <script type="text/javascript" src="directives.js"></script>
-    <script type="text/javascript" src="filters.js"></script>
-    <script type="text/javascript" src="services.js"></script>
-
-    <script src="assets/css/mdl/material.js"></script>
-  </body>
+</body>
 </html>
