@@ -1,4 +1,10 @@
 module.exports = function(app) {
+
+    /**
+     * Routes are handled by Angular in the front-end,
+     * so rendering the boilerplate and
+     * catch potential errors are enough here.
+     */
     app.get('/', function (req, res) {
         res.render('index');
     });

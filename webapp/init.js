@@ -4,7 +4,16 @@ angular.module('StackLoft').run(function () {
     // Init AV
     AV.initialize("5tjsn45l6phzutp8yjqpk7oem4u09do6pn3x6if54a159vyy", "38rssx5ijxbw56f1pyoclyy0gnnod1qqm6t8l9omaesc1xu4");
 
+    /**
+     * Service for enabling Angular 3-way binding in a LanCloud environment
+     * @type {{setup, angularizeAll}}
+     */
     var LeanCloud = (function (params) {
+        /**
+         * Attributes that will potentially be bound to views
+         * should be registered here
+         * @type {{Featured: {attributes: string[]}, Service: {attributes: string[]}, Article: {attributes: string[]}}}
+         */
         var ClassDefines = {
             Featured: {
                 attributes: ['service', 'article', 'type', 'position']

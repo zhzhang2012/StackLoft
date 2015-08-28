@@ -4,14 +4,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 module.exports = function (app, AV) {
-    // 设置 view 引擎
+    // Set view engine
     app.set('views', path.join(__dirname, '/../webapp'));
     app.set('view engine', 'ejs');
 
+    // Host static files
+    app.use(express.static('bower_components'));
     app.use(express.static('public'));
     app.use(express.static('webapp'));
-    app.use(express.static('bower_components'));
 
+    // Host cloud functions
     app.use(AV.Cloud);
 
     app.use(bodyParser.json());
