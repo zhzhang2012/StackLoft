@@ -1,0 +1,23 @@
+<header ng-controller="HeaderController" class="mdl-layout__header stack-loft-header">
+    <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title mdl-color-text--grey-100 mdl-typography--headline-color-contrast"
+                ng-click="redirectTo('/')" style="cursor:pointer;">
+            StackLoft
+        </span>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" ng-click="redirectTo('/')">Home</a>
+            <a class="mdl-navigation__link" ng-click="redirectTo('/services')">Services</a>
+            <a class="mdl-navigation__link" ng-click="redirectTo('/articles')">Articles</a>
+        </nav>
+
+    </div>
+</header>
+<div class="mdl-layout__drawer mdl-layout--small-screen-only">
+    <span class="mdl-layout-title">StackLoft</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" ng-click="redirectTo('/')">Home</a>
+        <a class="mdl-navigation__link" ng-click="redirectTo('/services')">Services</a>
+        <a class="mdl-navigation__link" ng-click="redirectTo('/articles')">Articles</a>
+    </nav>
+</div>

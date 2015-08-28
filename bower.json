@@ -1,0 +1,10 @@
+{
+  "name": "StackLoft",
+  "description": "A Platform for sharing start-up stacks",
+  "dependencies": {
+  	"angular": "~1.4.3",
+    "angular-markdown-directive": "latest",
+    "angular-sanitize": "latest",
+    "showdown": "latest"
+  }
+}

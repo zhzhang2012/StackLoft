@@ -1,0 +1,25 @@
+<h3>{{ service.name }}</h3>
+<h5>{{ service.brief }}</h5>
+<img src="{{ service.logo.url() }}" />
+
+<table>
+    <tbody>
+    <tr ng-repeat="feature in service.features">
+        <td>{{ $index + 1 }}</td>
+        <td>{{ feature }}</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<table>
+    <tbody>
+    <tr ng-repeat="article in articles" ng-click="showArticle(article.id)">
+        <td>{{ $index + 1 }}</td>
+        <td>{{ article.title }}</td>
+    </tr>
+    </tbody>
+</table>
+
+<p>
+    {{ service.description }}
+</p>

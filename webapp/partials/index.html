@@ -1,0 +1,104 @@
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+    <div class="mdl-cell mdl-cell--10-col mdl-cell--12-tablet mdl-cell--12-phone">
+        <div class="mdl-grid">
+            <div class="mdl-cell--12-col">
+                <h5><strong><span class="mdl-color-text--cyan-600">- </span>
+                    Editor's Choices
+                    <span class="mdl-color-text--cyan-600"> -</span></strong></h5>
+                <hr>
+            </div>
+        </div>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--12-tablet mdl-cell--12-col-phone stack-loft-feature">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-tablet mdl-cell--12-col-phone stack-loft-feature">
+                        <div class="stack-loft-feature-image stack-loft-feature-image-main">Image Container</div>
+                        <div class="stack-loft-image-caption">
+                            <label class="mdl-card__title-text">{{ mainFeature.name }}</label>
+                            <ul class="mdl-color-text--grey-600">
+                                <li ng-repeat="keyword in mainFeature.features">{{ keyword }} </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--12-tablet mdl-cell--12-col-phone stack-loft-feature">
+                <div class="mdl-grid">
+                    <div ng-repeat="feature in sideFeatures"
+                         class="mdl-cell mdl-cell--6-col mdl-cell--12-tablet mdl-cell--12-col-phone stack-loft-feature-side">
+                        <div class="stack-loft-feature-image stack-loft-feature-image-side">Image Container</div>
+                        <div class="stack-loft-image-caption">
+                            <label>{{ feature.title }}</label>
+                            <ul class="mdl-color-text--grey-600">
+                                <li ng-repeat="keyword in feature.keywords">{{ keyword }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--List Services-->
+        <div class="mdl-grid">
+            <div class="mdl-cell--12-col">
+                <h5><strong><span class="mdl-color-text--cyan-600">- </span>
+                    Services
+                    <span class="mdl-color-text--cyan-600"> -</span></strong></h5>
+                <hr>
+            </div>
+        </div>
+        <div class="mdl-grid">
+            <div ng-repeat="service in services" class="mdl-cell mdl-cell--4-col
+                                                        mdl-cell--6-col-tablet mdl-cell--12-col-phone">
+                <div class="mdl-card mdl-shadow--2dp stack-loft-service-card"
+                     style="background: url('{{ service.logo.url()}}'); background-size: 100%;">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">{{ service.name }}</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        {{ service.brief }}
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border ">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                           ng-click="redirect('/services/' + service.id)">
+                            View More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--List Articles-->
+        <div class="mdl-grid">
+            <div class="mdl-cell--12-col">
+                <h5><strong><span class="mdl-color-text--cyan-600">- </span>
+                    Articles
+                    <span class="mdl-color-text--cyan-600"> -</span></strong></h5>
+                <hr>
+            </div>
+        </div>
+        <div class="mdl-grid">
+            <div ng-repeat="article in articles" class="mdl-cell mdl-cell--6-col
+                                                        mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <div class="mdl-card mdl-shadow--2dp stack-loft-article-card">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h5>
+                            {{ article.title }}
+                            <ul class="mdl-mini-footer--link-list mdl-color-text--grey-600">
+                                <li ng-repeat="keyword in article.keywords">- {{ keyword }} -</li>
+                            </ul>
+                        </h5>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                           ng-click="redirect('/articles/' + article.id)">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+    </div>
+</div>
