@@ -1,1 +1,8 @@
-Cloud code project for StackLoft. Cloud Code Guide: https://cn.avoscloud.com/docs/cloud_code_guide.html
+### StackLoft
+A platform for sharing startup stacks and relative technologies
+
+### Usage
+```bash
+$ npm install && bower install
+$ avoscloud
+```
